@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uchiha Portfolio</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #ff0000;
+      text-align: center;
+      font-family: "Courier New", monospace;
+    }
+
+    h1 {
+      color: #f00;
+      font-size: 36px;
+    }
+
+    .image-container {
+      margin-top: 20px;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 50%;
+    }
+
+    .story {
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .audio-controls {
+      margin-top: 20px;
+    }
+
+    .hacker-button {
+      background-color: #000;
+      color: #0f0;
+      border: 2px solid #0f0;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .hacker-button:hover {
+      background-color: #0f0;
+      color: #000;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      const audio = new Audio('jchrist.mp3');
+      const playButton = document.getElementById('play-btn');
+      const stopButton = document.getElementById('stop-btn');
+
+      playButton.addEventListener('click', () => {
+        audio.play();
+      });
+
+      stopButton.addEventListener('click', () => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    };
+  </script>
+</head>
+<body>
+  <h1>Uchiha Portfolio</h1>
+
+  <div class="image-container">
+    <img src="Uchiha.jpg" alt="Uchiha Clan">
+  </div>
+
+  <div class="story">
+    <h2>The Uchiha Clan and Coding</h2>
+    <p>The Uchiha Clan is renowned for their exceptional abilities and Sharingan eye technique. In the world of coding, we strive to develop our own unique skills and techniques, just like the Uchiha Clan.</p>
+    <p>Programming and developing, like the Sharingan, allow us to perceive and understand the intricacies of technology. With each line of code we write, we unlock new possibilities and shape the digital world around us.</p>
+    <p>As the Uchiha Clan sought to protect and advance their abilities, we, as developers, aim to use our coding skills to create innovative solutions, build amazing projects, and contribute to the ever-evolving field of technology.</p>
+  </div>
+
+  <div class="audio-controls">
+    <button id="play-btn" class="hacker-button">Play</button>
+    <button id="stop-btn" class="hacker-button">Stop</button>
+  </div>
+</body>
+</html>
