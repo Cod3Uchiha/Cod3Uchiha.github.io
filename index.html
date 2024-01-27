@@ -37,8 +37,8 @@
 
     .hacker-button {
       background-color: #000;
-      color: #0f0;
-      border: 2px solid #0f0;
+      color: #f00;
+      border: 2px solid #f00;
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
@@ -46,8 +46,18 @@
     }
 
     .hacker-button:hover {
-      background-color: #0f0;
-      color: #000;
+      background-color: #f00;
+      color: #fff;
+    }
+
+    .contact-details {
+      margin-top: 20px;
+      color: #fff;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      color: #fff;
     }
   </style>
   <script>
@@ -64,6 +74,15 @@
         audio.pause();
         audio.currentTime = 0;
       });
+    };
+
+    document.addEventListener('contextmenu', event => event.preventDefault()); // Disable right-click context menu
+    document.onkeydown = function (e) { // Disable copy, cut, and paste
+      if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85)) {
+        return false;
+      } else {
+        return true;
+      }
     };
   </script>
 </head>
@@ -84,6 +103,16 @@
   <div class="audio-controls">
     <button id="play-btn" class="hacker-button">Play</button>
     <button id="stop-btn" class="hacker-button">Stop</button>
+  </div>
+
+  <div class="contact-details">
+    <p>Contact me: <a href="https://wa.me/263785028126" style="color: #f00;">WhatsApp: +263785028126</a></p>
+    <p>GitHub: <a href="https://github.com/Cod3chiha" style="color: #f00;">github.com/Cod3chiha</a></p>
+  </div>
+
+  <div class="copyright">
+    <p>&copy; Cod3Uchiha 2024</p>
+    <p>The song belongs to <b>Lil Nas X</b> I didn't mean to do wrong.</p>
   </div>
 </body>
 </html>
